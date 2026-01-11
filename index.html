@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#00c6ff">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>المكلا تيليكوم</title>
+
+<link rel="icon" type="image/png" href="https://almukallatelecom.store/logo.png">
+<link rel="shortcut icon" type="image/png" href="https://almukalla.store/logo.png">
+<link rel="apple-touch-icon" href="https://almukallatelecom.store/logo.png">
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- دوائر متطايرة -->
+<ul class="circles">
+  <li></li><li></li><li></li><li></li><li></li>
+  <li></li><li></li><li></li><li></li>
+</ul>
+
+<!-- عداد التحميل -->
+<div id="loader" class="loader-overlay">
+  <div class="loader-card">
+    
+    <div class="progress-circle">
+      <svg width="120" height="120">
+        <circle cx="60" cy="60" r="54" stroke="#ddd" stroke-width="8" fill="none"/>
+        <circle id="progressRing" cx="60" cy="60" r="54" stroke="#1e90ff" stroke-width="8" fill="none"
+                stroke-linecap="round"
+                stroke-dasharray="339"
+                stroke-dashoffset="339"/>
+      </svg>
+      <div class="progress-text" id="loaderPercent">0%</div>
+    </div>
+
+    <div class="progress-info" id="loaderSize">0 MB / 0 MB</div>
+    <div class="progress-speed" id="loaderSpeed">0 KB/s</div>
+    <div class="slow-msg" id="slowMsg"> سرعة الإنترنت بطيئة، الرجاء الانتظار</div>
+
+  </div>
+</div>
+
+<header class="main-header">
+  <div class="header-left">
+    <img src="logo.png" class="logo">
+    <div class="title">
+      <h1>المكلا تيليكوم</h1>
+      <span class="version">الإصدار 923</span>
+    </div>
+  </div>
+</header>
+
+<main>
+  <h2 class="main-title">تحميل التطبيق</h2>
+  <p class="subtitle">
+    اختر أفضل تجربة تناسب جهازك واستمتع بكامل مزايا التطبيق
+  </p>
+
+  <div class="download-box">
+    <a id="oldApk" href="#" class="btn"
+       onclick="downloadAPK('app-armeabi-v7a-release.apk')">
+       تحميل نسخة أندرويد العادي
+    </a>
+
+    <a id="newApk" class="btn"
+   href="https://github.com/mohammedma1gda-max/almukalla-telecom/releases/download/v923/app-release.apk"
+   target="_blank">
+   تحميل نسخة أندرويد الحديثة
+    </a>
+
+    <a id="webApp" href="https://almukallaw.yemoney.net/"
+       class="btn" target="_blank">
+       تشغيل تطبيق الويب
+    </a>
+  
+
+  </div>
+
+<div class="features">
+  <div class="feature-card">
+    <img src="mukalla1.png" onclick="openImage(0)">
+  </div>
+
+  <div class="feature-card">
+    <img src="mukalla2.png" onclick="openImage(1)">
+  </div>
+
+  <div class="feature-card">
+    <img src="mukalla3.png" onclick="openImage(2)">
+  </div>
+</div>
+
+ <div class="contact-card">
+  <div class="contact-icon phone">
+    <i class="fa-solid fa-phone"></i>
+  </div>
+
+  <div class="contact-text">
+    <div class="contact-title">التواصل مع إدارة التطبيق</div>
+
+    <div class="contact-numbers">
+      <a href="tel:772366133">772366133</a> - 
+      <a href="tel:774409663">774409663</a>
+    </div>
+
+    <div class="contact-actions">
+      <a class="wa-btn" href="https://wa.me/967774409663" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i> واتساب
+      </a>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div>جميع الحقوق محفوظة المكلا تيليكوم 2026©</div>
+
+  <div class="footer-links">
+    <a href="policy.html">سياسة الخصوصية | Privacy Policy</a>
+  <br>
+    <a href="terms.html">الشروط والأحكام | Terms & Conditions</a>
+  </div>
+</footer>
+
+<!-- نافذة عرض الصور -->
+<div id="imageModal" class="image-modal">
+  <span class="close-btn" onclick="closeImage()">✕</span>
+  <span class="nav prev" onclick="changeImage(-1)">‹</span>
+  <img id="modalImg">
+  <span class="nav next" onclick="changeImage(1)">›</span>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
