@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Cairo', sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(ellipse at bottom, #0d1b2a 0%, #02040f 100%);
+  color: #eaf6ff;
+}
+
+/* شريط الرجوع */
+.top-bar {
+  padding: 15px;
+}
+
+.back-btn {
+  color: #7ddcff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* الحاوية */
+.policy-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* صندوق الشعار */
+.logo-box {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.policy-logo {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 40px rgba(0,200,255,0.9);
+}
+
+.logo-box h1 {
+  margin: 10px 0 0 0;
+  color: #7ddcff;
+}
+
+.logo-box h2 {
+  margin: 5px 0 0 0;
+  font-weight: normal;
+  opacity: 0.9;
+}
+
+/* بطاقة المحتوى */
+.card {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+  border-radius: 25px;
+  padding: 25px;
+  box-shadow: 0 0 40px rgba(0,180,255,0.25);
+}
+
+.card h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #7ddcff;
+}
+
+.card h4 {
+  margin-top: 25px;
+  color: #9be7ff;
+}
+
+.card p {
+  line-height: 1.9;
+  font-size: 16px;
+  color: #eaf6ff;
+}
+
+/* الفوتر */
+.policy-footer {
+  margin-top: 30px;
+  text-align: center;
+  opacity: 0.8;
+  font-size: 14px;
+}
+.en {
+  direction: ltr;
+  text-align: left;
+  opacity: 0.9;
+}
+
+.ar {
+  direction: rtl;
+  text-align: right;
+}
+.card {
+  text-align: left;
+}
+
+.card h3, .card h4 {
+  margin-top: 25px;
+}
+
+.card p {
+  line-height: 1.8;
+}
+
+/* الجزء العربي */
+.card h3:last-of-type,
+.card h4:nth-of-type(n+6),
+.card h4:nth-of-type(n+6) + p {
+  direction: rtl;
+  text-align: right;
+}
